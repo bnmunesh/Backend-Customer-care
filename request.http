@@ -1,0 +1,17 @@
+GET http://localhost:3000/customer/fsdfadf12321
+
+
+###
+POST http://localhost:3000/user/create 
+Content-Type: application/json 
+
+{
+    "username": "Munesh1",
+    "role": "customer"
+}
+
+###
+GET http://localhost:3000/user/byid/6585cc9c2ac133afcfde2782
+
+###
+GET http://localhost:3000/user/Munesh1

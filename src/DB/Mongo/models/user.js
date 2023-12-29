@@ -1,0 +1,19 @@
+const {Schema, model} = require("mongoose");
+
+const userSchema = new Schema({
+    username: {
+        type:String,
+        unique: true,
+        required: true,
+    },
+    socketID: {
+        type:String,
+    },
+    role: {
+        type: String,
+        enum: ["customer", "executive"]
+    }
+})
+
+const UserModel = model("user", userSchema);
+module.exports = {UserModel};
